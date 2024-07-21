@@ -1,11 +1,15 @@
-import Image from "next/image";
-import Link from "next/link";
+import Hero from "@/components/Hero";
+import HomeLaptops from "@/components/HomeLaptops";
+import InfoBoxes from "@/components/InfoBoxes";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
-    <h1>Welcome</h1>
-    <Link href="/laptops">Show Laptops</Link>
+      <Hero />
+      <InfoBoxes />
+      <HomeLaptops />
     </>
   );
-}
+};
+
+export default Home;

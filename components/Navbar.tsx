@@ -16,7 +16,8 @@ const Navbar = () => {
   const pathname = usePathname();
   // console.log(pathname)
   return (
-    <nav className="bg-blue-400 border-b border-blue-500">
+    <nav className="bg-blue-400 border-b border-blue-500 fixed w-full mb-5 top-0">
+    {/* <nav className="flex-no-wrap fixed relative top-0 flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4"> */}
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-20 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
