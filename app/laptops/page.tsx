@@ -1,20 +1,10 @@
 import LaptopCard from "@/components/LaptopCard";
-
-async function fetchLaptops() {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_DOMAIN}/laptops`);
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return res.json();
-  } catch (error) {
-    console.log(error);
-  }
-}
+import { fetchLaptops } from "@/utils/requests";
 
 const page = async () => {
   const laptops = await fetchLaptops();
+
+  laptops.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
   console.log(laptops)
   return (
     <section className="px-4 py-6">

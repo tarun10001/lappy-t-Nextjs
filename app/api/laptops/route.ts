@@ -6,7 +6,7 @@ import connectDB from "@/config/database";
 export const GET = async (request) => {
   try {
     await connectDB();
-    const laptops = await Laptop.find({});
+    const laptops = await Laptop.find();
     return new Response(JSON.stringify(laptops), { status: 200 });
   } catch (error) {
     console.log(error)
