@@ -9,7 +9,7 @@ interface LaptopHeaderImageProps {
 const LaptopHeaderImage: React.FC<LaptopHeaderImageProps> = ({image, title}) => {
   return (
     <section>
-      <div className="container-xl m-auto mt-28 mb-16">
+      <div className="container-xl m-auto mt-28">
         <div className="grid grid-cols-1">
           <Image
           src={image}
@@ -21,7 +21,6 @@ const LaptopHeaderImage: React.FC<LaptopHeaderImageProps> = ({image, title}) => 
           priority={true}
           />
         </div>
-        <p>{title}</p>
       </div>
     </section>
   );

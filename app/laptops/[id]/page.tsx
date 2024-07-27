@@ -2,6 +2,7 @@
 
 import LaptopDetails from "@/components/LaptopDetails";
 import LaptopHeaderImage from "@/components/LaptopHeaderImage";
+import Spinner from "@/components/Spinner";
 import { fetchLaptop } from "@/utils/requests";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -59,6 +60,7 @@ const page = () => {
 
   return (
     <>
+    {loading && <Spinner loading={loading} />}
       {!loading && laptop && (
         <>
           <LaptopHeaderImage image={laptop.images[0]} title={laptop.name} />
