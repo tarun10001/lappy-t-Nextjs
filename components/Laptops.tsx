@@ -1,7 +1,8 @@
+'use client';
 import LaptopCard from "@/components/LaptopCard";
 import { fetchLaptops } from "@/utils/requests";
 
-const LaptopsPage = async () => {
+const Laptops = async () => {
   const laptops = await fetchLaptops();
 
   laptops.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
@@ -23,4 +24,4 @@ const LaptopsPage = async () => {
   );
 };
 
-export default LaptopsPage;
+export default Laptops;

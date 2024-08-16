@@ -1,5 +1,4 @@
 "use client";
-
 import LaptopDetails from "@/components/LaptopDetails";
 import LaptopHeaderImage from "@/components/LaptopHeaderImage";
 import Spinner from "@/components/Spinner";
@@ -7,6 +6,7 @@ import { fetchLaptop } from "@/utils/requests";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import LaptopImages from "@/components/LaptopImages";
 import {
   FaArrowLeft,
   FaBath,
@@ -66,7 +66,7 @@ const page = () => {
           <LaptopHeaderImage image={laptop.images[0]} title={laptop.name} />
 
           <section>
-            <div className="container m-auto py-6 px-6">
+            <div className="container m-auto px-6">
               <Link
                 href="/laptops"
                 className="text-blue-500 hover:text-blue-600 flex items-center"
@@ -162,6 +162,7 @@ const page = () => {
               </div>
             </div>
           </section>
+          <LaptopImages images={laptop.images} />
         </>
       )}
     </>

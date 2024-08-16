@@ -7,7 +7,7 @@ async function fetchLaptops() {
     if (!apiDomain) {
         return [];
     }
-    const res = await fetch(`${apiDomain}/laptops`);
+    const res = await fetch(`${apiDomain}/laptops`, {cache: 'no-store'});
 
     if (!res.ok) {
       throw new Error("Failed to fetch data");

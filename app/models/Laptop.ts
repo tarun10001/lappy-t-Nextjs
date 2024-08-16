@@ -18,7 +18,7 @@ const LaptopSchema = new Schema(
     description: {
       type: String,
     },
-    location: {
+    store_location: {
       street: {
         type: String,
       },
@@ -33,31 +33,52 @@ const LaptopSchema = new Schema(
       },
     },
     screen_size: {
-      type: Number,
+      type: String,
       required: true,
     },
     processor: {
-      type: Number,
+      type: String,
       required: true,
     },
     storage: {
-      type: Number,
+      type: String,
       required: true,
     },
-    amenities: [
+    brand: {
+      type: String,
+      required: true,
+    },
+    cpu_brand: {
+      type: String,
+      required: true,
+    },
+    operating_system: {
+      type: String,
+      required: true,
+    },
+    weight: {
+      type: String,
+      required: true,
+    },
+    graphics_card_memory: {
+      type: String,
+      required: true,
+    },
+    warranty: {
+      type: String,
+      required: true,
+    },
+    features: [
       {
         type: String,
       },
     ],
     rates: {
-      nightly: {
-        type: Number,
-      },
-      mrp: {
-        type: Number,
+      regular_price: {
+        type: String,
       },
       discount_price: {
-        type: Number,
+        type: String,
       },
     },
     seller_info: {
