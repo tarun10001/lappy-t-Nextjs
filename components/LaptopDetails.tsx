@@ -71,7 +71,7 @@ const LaptopDetails = ({ laptop }) => {
         <h3 className="text-lg font-bold mb-6">Description & Details</h3>
         <div className="flex justify-center gap-4 text-blue-500 mb-4 text-xl space-x-9">
           <p>
-            <MdOutlineScreenshotMonitor className="inlin-block mr-2" />
+            <MdOutlineScreenshotMonitor className="inline-block mr-2" />
             <span className="hidden sm:inline">{laptop.screen_size}</span>
           </p>
           <p>
