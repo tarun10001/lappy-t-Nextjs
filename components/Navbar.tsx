@@ -205,7 +205,7 @@ const Navbar = () => {
                       id="user-menu-item-2"
                       onClick={() => setIsProfileMenuOpen(false)}
                     >
-                      Saved Properties
+                      Saved Laptops
                     </Link>
                     <button
                     onClick={() => {
