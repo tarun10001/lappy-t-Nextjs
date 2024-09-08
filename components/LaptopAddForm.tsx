@@ -120,9 +120,9 @@ const LaptopAddForm = () => {
             value={fields.type}
             onChange={handleChange}
           >
-            <option value="Gaming Laptop">Gaming Laptop</option>
-            <option value="Business Laptop">Business Laptop</option>
-            <option value="Notebook Laptop">Notebook Laptop</option>
+            <option value="Gaming-Laptop">Gaming-Laptop</option>
+            <option value="Business-Laptop">Business-Laptop</option>
+            <option value="Notebook-Laptop">Notebook-Laptop</option>
           </select>
         </div>
         <div className="mb-4">
