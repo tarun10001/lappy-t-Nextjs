@@ -48,8 +48,8 @@ import LaptopCard from './LaptopCard';
 import { fetchLaptops } from '@/utils/requests';
 
 const HomeLaptops = async () => {
-  const laptops = await fetchLaptops();
-  const recentLaptops = laptops
+  const data = await fetchLaptops();
+  const recentLaptops = data.laptops
     .sort(() => Math.random() - Math.random())
     .slice(0, 3);
 

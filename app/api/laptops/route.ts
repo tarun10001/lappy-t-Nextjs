@@ -7,9 +7,23 @@ import cloudinary from "@/config/cloudinary";
 export const GET = async (request) => {
   try {
     await connectDB();
-    // console.log(laptops)
-    const laptops = await Laptop.find({});
-    return new Response(JSON.stringify(laptops), {status: 200});
+    const page = request.nextUrl.searchParams.get("page") || 1;
+    const pageSize = request.nextUrl.searchParams.get("pageSize") || 6;
+
+    const skip = (page - 1) * pageSize;
+
+    const totalLaptops = await Laptop.countDocuments({});
+    const laptops = await Laptop.find({}).skip(skip).limit(pageSize);
+    // console.log(laptops);
+
+    const result = {
+      totalLaptops,
+      laptops,
+    };
+
+    // console.log(laptops.length);
+
+    return new Response(JSON.stringify(result), { status: 200 });
   } catch (error) {
     console.log(error);
     return new Response("Something went wrong", {
