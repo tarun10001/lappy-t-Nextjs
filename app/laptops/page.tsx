@@ -1,6 +1,5 @@
 import Laptops from "@/components/Laptops";
 import LaptopSearchForm from "@/components/LaptopSearchForm";
-import { fetchLaptops } from "@/utils/requests";
 
 const LaptopsPage = async () => {
   return (

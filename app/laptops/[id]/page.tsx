@@ -7,28 +7,15 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import LaptopImages from "@/components/LaptopImages";
-import {
-  FaArrowLeft,
-  FaBath,
-  FaBed,
-  FaBookmark,
-  FaCheck,
-  FaMapMarker,
-  FaPaperPlane,
-  FaRulerCombined,
-  FaShare,
-  FaTimes,
-} from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import BookmarkButton from "@/components/BookmarkButton";
-import ShareButtons from "@/components/ShareButtons";
-import LaptopContactForm from "@/components/LaptopContactForm";
 
 interface Laptop {
   images: string[];
   title: string;
 }
 
-const page = () => {
+const Page = () => {
   const { id } = useParams<{ id: string }>();
 
   const [laptop, setLaptop] = useState<Laptop | null>(null);
@@ -85,8 +72,6 @@ const page = () => {
 
                 <aside className="space-y-4">
                   <BookmarkButton laptop={laptop} />
-                  {/* <ShareButtons laptop={laptop} /> */}
-                  {/* <LaptopContactForm laptop={laptop} /> */}
                 </aside>
               </div>
             </div>
@@ -98,4 +83,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
