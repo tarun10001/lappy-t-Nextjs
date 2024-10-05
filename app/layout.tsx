@@ -7,6 +7,7 @@ import AuthProvider from "@/components/AuthProvider";
 // import "@/assets/styles/globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import 'photoswipe/dist/photoswipe.css';
 
 const inter = Inter({ subsets: ["latin"] });
 

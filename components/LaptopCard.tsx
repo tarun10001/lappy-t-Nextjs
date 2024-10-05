@@ -40,17 +40,19 @@ const LaptopCard = ({ laptop }) => {
             <MdSdStorage className="inline mr-2" />
             {laptop.storage}
           </p>
+          <p>
+            <MdSdStorage className="inline mr-2" />
+            {laptop.ram} RAM
+          </p>
           <p className="text-blue-500 text-center">
             {" "}
             <span className="text-xl">₹{laptop.rates.discount_price}</span>{" "}
             <span className="line-through text-xl">
-            ₹{laptop.rates.regular_price}
+              ₹{laptop.rates.regular_price}
             </span>
           </p>
         </div>
         <div className="border border-gray-100 mb-5"></div>
-
-
 
         <div className="flex flex-col lg:flex-row justify-between items-center mb-4">
           <div>
@@ -72,8 +74,6 @@ const LaptopCard = ({ laptop }) => {
             Details
           </Link>
         </div>
-
-
       </div>
     </div>
   );

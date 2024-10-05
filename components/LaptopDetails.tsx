@@ -26,7 +26,7 @@ const LaptopDetails = ({ laptop }) => {
           </div>
         </div>
 
-        <h3 className="text-lg font-bold my-6 bg-gray-800 text-white p-2">
+        <h3 className="text-lg font-bold my-6 bg-gray-800 text-white p-2 w-20">
           Prices
         </h3>
         <div className="flex flex-col md:flex-row justify-around">
@@ -68,6 +68,10 @@ const LaptopDetails = ({ laptop }) => {
             <MdSdStorage className="inline-block mr-2" />
             <span className="hidden sm:inline">{laptop.storage}</span>
           </p>
+          <p>
+            <MdSdStorage className="inline-block mr-2" />
+            <span className="hidden sm:inline">{laptop.ram} RAM</span>
+          </p>
         </div>
         <p className="text-gray-500 mb-4 text-center">{laptop.description}</p>
       </div>
@@ -84,10 +88,6 @@ const LaptopDetails = ({ laptop }) => {
           ))}
         </ul>
       </div>
-{/* 
-      <div className="bg-white p-6 rounded-lg shadow-md mt-6">
-        <div id="map"></div>
-      </div> */}
     </main>
   );
 };

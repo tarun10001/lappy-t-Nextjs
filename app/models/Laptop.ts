@@ -56,7 +56,7 @@ const LaptopSchema = new Schema(
       type: String,
       required: true,
     },
-    weight: {
+    ram: {
       type: String,
       required: true,
     },

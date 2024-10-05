@@ -85,8 +85,8 @@ const page = () => {
 
                 <aside className="space-y-4">
                   <BookmarkButton laptop={laptop} />
-                  <ShareButtons laptop={laptop} />
-                  <LaptopContactForm laptop={laptop} />
+                  {/* <ShareButtons laptop={laptop} /> */}
+                  {/* <LaptopContactForm laptop={laptop} /> */}
                 </aside>
               </div>
             </div>

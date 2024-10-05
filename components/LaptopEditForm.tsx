@@ -22,12 +22,11 @@ const LaptopEditForm = () => {
     },
     screen_size: "",
     processor: "",
-    ram: "",
     storage: "",
     brand: "",
     cpu_brand: "",
     operating_system: "",
-    weight: "",
+    ram: "",
     graphics_card_memory: "",
     camera_resolution: "",
     warranty: "",
@@ -230,7 +229,7 @@ const LaptopEditForm = () => {
           </select>
         </div>
 
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <label htmlFor="ram" className="block text-gray-700 font-bold mb-2">
             RAM
           </label>
@@ -247,7 +246,7 @@ const LaptopEditForm = () => {
             <option value="16 GB">16 GB</option>
             <option value="32 GB">32 GB</option>
           </select>
-        </div>
+        </div> */}
 
         <div className="mb-4">
           <label
@@ -334,23 +333,23 @@ const LaptopEditForm = () => {
 
         <div className="mb-4">
           <label
-            htmlFor="weight"
+            htmlFor="ram"
             className="block text-gray-700 font-bold mb-2"
           >
-            Weight
+            RAM
           </label>
           <select
-            id="weight"
-            name="weight"
+            id="ram"
+            name="ram"
             className="border rounded w-full py-2 px-3"
             required
-            value={fields.weight}
+            value={fields.ram}
             onChange={handleChange}
           >
-            <option value="Less than 2 kg">Less than 2 kg</option>
-            <option value="Around 1.5 kg">Around 1.5 kg</option>
-            <option value="Greater than 2 kg">Greater than 2 kg</option>
-            <option value="Greater than 2.5 kg">Less than 2.5 kg</option>
+            <option value="4 GB">4 GB</option>
+            <option value="8 GB">8 GB</option>
+            <option value="16 GB">16 GB</option>
+            <option value="32 GB">32 GB</option>
           </select>
         </div>
 

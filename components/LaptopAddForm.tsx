@@ -17,12 +17,11 @@ const LaptopAddForm = () => {
     },
     screen_size: "",
     processor: "",
-    ram: "",
     storage: "",
     brand: "",
     cpu_brand: "",
     operating_system: "",
-    weight: "",
+    ram: "",
     graphics_card_memory: "",
     camera_resolution: "",
     warranty: "",
@@ -134,7 +133,7 @@ const LaptopAddForm = () => {
             id="name"
             name="name"
             className="border rounded w-full py-2 px-3 mb-2"
-            placeholder="eg. Beautiful Apartment In Miami"
+            placeholder="eg. Powerful Gaming Laptop"
             required
             value={fields.name}
             onChange={handleChange}
@@ -158,286 +157,221 @@ const LaptopAddForm = () => {
           ></textarea>
         </div>
 
+        <div className="mb-4">
+          <label
+            htmlFor="screen_size"
+            className="block text-gray-700 font-bold mb-2"
+          >
+            Screen Size
+          </label>
+          <select
+            id="screen_size"
+            name="screen_size"
+            className="border rounded w-full py-2 px-3"
+            required
+            value={fields.screen_size}
+            onChange={handleChange}
+          >
+            <option value="13.3 Inch">13.3 Inch</option>
+            <option value="14 Inch">14 Inch</option>
+            <option value="15.6 Inch">15.6 Inch</option>
+            <option value="16 Inch">16 Inch</option>
+          </select>
+        </div>
 
-        {/* <div className="mb-4 flex flex-wrap">
-          <div className="w-full sm:w-1/3 pr-2">
-            <label
-              htmlFor="screen_size"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Screen Size
-            </label>
-            <input
-              type="text"
-              id="screen_size"
-              name="screen_size"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.screen_size}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="w-full sm:w-1/3 px-2">
-            <label
-              htmlFor="processor"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Processor
-            </label>
-            <input
-              type="text"
-              id="processor"
-              name="processor"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.processor}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="w-full sm:w-1/3 pl-2">
-            <label
-              htmlFor="storage"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Storage
-            </label>
-            <input
-              type="text"
-              id="storage"
-              name="storage"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.storage}
-              onChange={handleChange}
-            />
-          </div>
+        <div className="mb-4">
+          <label
+            htmlFor="processor"
+            className="block text-gray-700 font-bold mb-2"
+          >
+            Processor
+          </label>
+          <select
+            id="processor"
+            name="processor"
+            className="border rounded w-full py-2 px-3"
+            required
+            value={fields.processor}
+            onChange={handleChange}
+          >
+            <option value="Intel i9">Intel i9</option>
+            <option value="Intel i7">Intel i7</option>
+            <option value="Intel i5">Intel i5</option>
+            <option value="Intel i3">Intel i3</option>
+            <option value="AMD Ryzen 5">AMD Ryzen 5</option>
+            <option value="AMD Ryzen 7">AMD Ryzen 7</option>
+            <option value="AMD Ryzen 9">AMD Ryzen 9</option>
+          </select>
+        </div>
+
+        {/* <div className="mb-4">
+          <label htmlFor="ram" className="block text-gray-700 font-bold mb-2">
+            RAM
+          </label>
+          <select
+            id="ram"
+            name="ram"
+            className="border rounded w-full py-2 px-3"
+            required
+            value={fields.ram}
+            onChange={handleChange}
+          >
+            <option value="4 GB">4 GB</option>
+            <option value="8 GB">8 GB</option>
+            <option value="16 GB">16 GB</option>
+            <option value="32 GB">32 GB</option>
+          </select>
         </div> */}
 
-<div className="mb-4">
-            <label
-              htmlFor="screen_size"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Screen Size
-            </label>
-            <select
-              id="screen_size"
-              name="screen_size"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.screen_size}
-              onChange={handleChange}
-            >
-              <option value="13.3 Inch">13.3 Inch</option>
-              <option value="14 Inch">14 Inch</option>
-              <option value="15.6 Inch">15.6 Inch</option>
-              <option value="16 Inch">16 Inch</option>
-            </select>
-          </div>
+        <div className="mb-4">
+          <label
+            htmlFor="storage"
+            className="block text-gray-700 font-bold mb-2"
+          >
+            Storage
+          </label>
+          <select
+            id="storage"
+            name="storage"
+            className="border rounded w-full py-2 px-3"
+            required
+            value={fields.storage}
+            onChange={handleChange}
+          >
+            <option value="256 GB SSD">256 GB SSD</option>
+            <option value="500 GB SSD">500 GB SSD</option>
+            <option value="1 TB SSD">1 TB SSD</option>
+          </select>
+        </div>
 
-          <div className="mb-4">
-            <label
-              htmlFor="processor"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Processor
-            </label>
-            <select
-              id="processor"
-              name="processor"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.processor}
-              onChange={handleChange}
-            >
-              <option value="Intel i9">Intel i9</option>
-              <option value="Intel i7">Intel i7</option>
-              <option value="Intel i5">Intel i5</option>
-              <option value="Intel i3">Intel i3</option>
-              <option value="AMD Ryzen 5">AMD Ryzen 5</option>
-              <option value="AMD Ryzen 7">AMD Ryzen 7</option>
-              <option value="AMD Ryzen 9">AMD Ryzen 9</option>
-            </select>
-          </div>
+        <div className="mb-4">
+          <label htmlFor="brand" className="block text-gray-700 font-bold mb-2">
+            Brand
+          </label>
+          <select
+            id="brand"
+            name="brand"
+            className="border rounded w-full py-2 px-3"
+            required
+            value={fields.brand}
+            onChange={handleChange}
+          >
+            <option value="DELL">DELL</option>
+            <option value="HP">HP</option>
+            <option value="ASUS">ASUS</option>
+            <option value="SAMSUNG">SAMSUNG</option>
+            <option value="LENOVO">LENOVO</option>
+          </select>
+        </div>
 
-          <div className="mb-4">
-            <label
-              htmlFor="ram"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              RAM
-            </label>
-            <select
-              id="ram"
-              name="ram"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.ram}
-              onChange={handleChange}
-            >
-              <option value="4 GB">4 GB</option>
-              <option value="8 GB">8 GB</option>
-              <option value="16 GB">16 GB</option>
-              <option value="32 GB">32 GB</option>
-            </select>
-          </div>
+        <div className="mb-4">
+          <label
+            htmlFor="cpu_brand"
+            className="block text-gray-700 font-bold mb-2"
+          >
+            CPU Brand
+          </label>
+          <select
+            id="cpu_brand"
+            name="cpu_brand"
+            className="border rounded w-full py-2 px-3"
+            required
+            value={fields.cpu_brand}
+            onChange={handleChange}
+          >
+            <option value="INTEL">INTEL</option>
+            <option value="AMD">AMD</option>
+          </select>
+        </div>
 
+        <div className="mb-4">
+          <label
+            htmlFor="operating_system"
+            className="block text-gray-700 font-bold mb-2"
+          >
+            Operating System
+          </label>
+          <select
+            id="operating_system"
+            name="operating_system"
+            className="border rounded w-full py-2 px-3"
+            required
+            value={fields.operating_system}
+            onChange={handleChange}
+          >
+            <option value="Windows 11 HOME">Windows 11 HOME</option>
+            <option value="Windows 11 PRO">Windows 11 PRO</option>
+            <option value="Windows 11 Enterprise">Windows 11 Enterprise</option>
+            <option value="Windows 11 Education">Windows 11 Education</option>
+          </select>
+        </div>
 
-          <div className="mb-4">
-            <label
-              htmlFor="storage"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Storage
-            </label>
-            <select
-              id="storage"
-              name="storage"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.storage}
-              onChange={handleChange}
-            >
-              <option value="256 GB SSD">256 GB SSD</option>
-              <option value="500 GB SSD">500 GB SSD</option>
-              <option value="1 TB SSD">1 TB SSD</option>
-            </select>
-          </div>
+        <div className="mb-4">
+          <label
+            htmlFor="ram"
+            className="block text-gray-700 font-bold mb-2"
+          >
+            RAM
+          </label>
+          <select
+            id="ram"
+            name="ram"
+            className="border rounded w-full py-2 px-3"
+            required
+            value={fields.ram}
+            onChange={handleChange}
+          >
+            <option value="4 GB">4 GB</option>
+            <option value="8 GB">8 GB</option>
+            <option value="16 GB">16 GB</option>
+            <option value="32 GB">32 GB</option>
+          </select>
+        </div>
 
-          <div className="mb-4">
-            <label
-              htmlFor="brand"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Brand
-            </label>
-            <select
-              id="brand"
-              name="brand"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.brand}
-              onChange={handleChange}
-            >
-              <option value="DELL">DELL</option>
-              <option value="HP">HP</option>
-              <option value="ASUS">ASUS</option>
-              <option value="SAMSUNG">SAMSUNG</option>
-              <option value="LENOVO">LENOVO</option>
-            </select>
-          </div>
+        <div className="mb-4">
+          <label
+            htmlFor="graphics_card_memory"
+            className="block text-gray-700 font-bold mb-2"
+          >
+            Graphics Card Memory
+          </label>
+          <select
+            id="graphics_card_memory"
+            name="graphics_card_memory"
+            className="border rounded w-full py-2 px-3"
+            required
+            value={fields.graphics_card_memory}
+            onChange={handleChange}
+          >
+            <option value="2 GB Graphics Card">2 GB Graphics Card</option>
+            <option value="4 GB Graphics Card">4 GB Graphics Card</option>
+            <option value="6 GB Graphics Card">6 GB Graphics Card</option>
+            <option value="8 GB Graphics Card">8 GB Graphics Card</option>
+            <option value="12 GB Graphics Card">12 GB Graphics Card</option>
+          </select>
+        </div>
 
-          <div className="mb-4">
-            <label
-              htmlFor="cpu_brand"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              CPU Brand
-            </label>
-            <select
-              id="cpu_brand"
-              name="cpu_brand"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.cpu_brand}
-              onChange={handleChange}
-            >
-              <option value="INTEL">INTEL</option>
-              <option value="AMD">AMD</option>
-            </select>
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="operating_system"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Operating System
-            </label>
-            <select
-              id="operating_system"
-              name="operating_system"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.operating_system}
-              onChange={handleChange}
-            >
-              <option value="Windows 11 HOME">Windows 11 HOME</option>
-              <option value="Windows 11 PRO">Windows 11 PRO</option>
-              <option value="Windows 11 Enterprise">
-                Windows 11 Enterprise
-              </option>
-              <option value="Windows 11 Education">Windows 11 Education</option>
-            </select>
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="weight"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Weight
-            </label>
-            <select
-              id="weight"
-              name="weight"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.weight}
-              onChange={handleChange}
-            >
-              <option value="Less than 2 kg">Less than 2 kg</option>
-              <option value="Around 1.5 kg">Around 1.5 kg</option>
-              <option value="Greater than 2 kg">Greater than 2 kg</option>
-              <option value="Greater than 2.5 kg">Less than 2.5 kg</option>
-            </select>
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="graphics_card_memory"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Graphics Card Memory
-            </label>
-            <select
-              id="graphics_card_memory"
-              name="graphics_card_memory"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.graphics_card_memory}
-              onChange={handleChange}
-            >
-              <option value="2 GB Graphics Card">2 GB Graphics Card</option>
-              <option value="4 GB Graphics Card">4 GB Graphics Card</option>
-              <option value="6 GB Graphics Card">6 GB Graphics Card</option>
-              <option value="8 GB Graphics Card">8 GB Graphics Card</option>
-              <option value="12 GB Graphics Card">12 GB Graphics Card</option>
-            </select>
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="warranty"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Warranty
-            </label>
-            <select
-              id="warranty"
-              name="warranty"
-              className="border rounded w-full py-2 px-3"
-              required
-              value={fields.warranty}
-              onChange={handleChange}
-            >
-              <option value="1 yr Warranty">1 yr Warranty</option>
-              <option value="2 yrs Warranty">2 yrs Warranty</option>
-              <option value="3 yrs Warranty">3 yrs Warranty</option>
-              <option value="5 yrs Warranty">5 yrs Warranty</option>
-            </select>
-          </div>
-       
+        <div className="mb-4">
+          <label
+            htmlFor="warranty"
+            className="block text-gray-700 font-bold mb-2"
+          >
+            Warranty
+          </label>
+          <select
+            id="warranty"
+            name="warranty"
+            className="border rounded w-full py-2 px-3"
+            required
+            value={fields.warranty}
+            onChange={handleChange}
+          >
+            <option value="1 yr Warranty">1 yr Warranty</option>
+            <option value="2 yrs Warranty">2 yrs Warranty</option>
+            <option value="3 yrs Warranty">3 yrs Warranty</option>
+            <option value="5 yrs Warranty">5 yrs Warranty</option>
+          </select>
+        </div>
 
         <div className="mb-4">
           <label className="block text-gray-700 font-bold mb-2">Features</label>
