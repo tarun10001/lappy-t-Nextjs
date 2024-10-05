@@ -108,7 +108,7 @@ const ProfilePage = () => {
                 <Spinner loading={loading} />
               ) : (
                 laptops.map((laptop) => (
-                  <div className="mb-10">
+                  <div className="mb-10" key={laptop._id}>
                     <Link href={`/laptop/${laptop._id}`}>
                       <Image
                         className="h-32 w-full rounded-md object-cover"
